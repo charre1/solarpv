@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Register</title>
+
+
+    <link rel="stylesheet" href="../../static/frontend/main.css">
+
+</head><body class="page-container">
+    <header class="page-header">
+        <aside class="header-aside-left">
+            <section class="logo-container">
+                <a class="logo-link" href="index.html">
+                    <img class="logo-img" src="../../static/frontend/images/solarpv-logo.jpg" alt="solarPV company logo" />
+                </a>
+            </section>
+        </aside>
+        <aside class="header-aside-right">
+            <section class="header-right-list-container">
+                <ul class="header-right-link-list">
+                    <li class="header-right-link-list-item">
+                        <a class="about-us-link" href="./about-us.html">About Us</a>
+                    </li>
+                    <li class="header-right-link-list-item">
+                        <a class="contact-us-link" href="./contact-us.html">Contact Us</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="social-media-links-container">
+
+            </section>
+        </aside>
+        <nav class="main-navigation">
+            <ul class="main-navigation-list">
+                <li class="main-nav-list-item">
+                    <a class="main-nav-list-link" href="">Racks & Trackers</a>
+                </li>
+                <li class="main-nav-list-item">
+                    <a class="main-nav-list-link" href="">PV Module</a>
+                </li>
+                <li class="main-nav-list-item">
+                    <a class="main-nav-list-link" href="">PV Systems</a>
+                </li>
+                <li class="main-nav-list-item">
+                    <a class="main-nav-list-link" href="">Data Analytics</a>
+                </li>
+                <li class="main-nav-list-item">
+                    <a class="main-nav-list-link" href="">Cybersecurity</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+<div align="middle">
+
+    <br><br><br>
+
+   
+    <div class="line"></div>  
+
+       
+
+        <form action = "index">
+
+        <p>
+            <h1>Search for a Certificate By Model Number</h1>
+            <label  for="search">Search:</label><br><br>
+            <input type="text"  id="search"><br><br>
+            <input type="submit" id="search">
+        </p>
+    {% for c in certification %}
+    <div class="result">
+       <p style ="font-size: small">
+           Certification Number: {{ c.certificateNumber }} 
+           Model Number: {{ c.modelNumber }} 
+           Standard ID: {{ c.standardID }}
+        </p>
+    </div>
+    {% endfor %}
+
+
+
+
+
+
+
+    <footer class="page-footer">
+        <section class="footer-logo-container">
+            <a class="footer-logo-link" href="index.html">
+                <img class="footer-logo-img" src="../../static/frontend/images/solarpv-logo.svg" alt="solarPV company logo" />
+            </a>
+        </section>
+        <section class="footer-container">
+            <p class="footer-sub-section company-info">
+                Address, Phone, Email, Website
+            </p>
+            <p class="footer-sub-section copyright-container">
+                @ 2019 All Rights Reserved
+            </p>
+        </section>
+        <ul class="footer-nav-list">
+            <li class="footer-nav-list-item">
+                <a class="footer-nav-link" href="">Site Map</a>
+            </li>
+            |
+            <li class="footer-nav-list-item">
+                <a class="footer-nav-link" href="">Terms & Conditions</a>
+            </li>
+            |
+            <li class="footer-nav-list-item">
+                <a class="footer-nav-link" href="">Privacy Policy</a>
+            </li>
+            |
+            <li class="footer-nav-list-item">
+                <a class="footer-nav-link" href="">About Us</a>
+            </li>
+        </ul>
+		
+         
+        
+         
+                         
+    </footer></body>
+</html>
